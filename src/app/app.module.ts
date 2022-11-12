@@ -11,9 +11,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { AngularMaterialModule } from './angularMaterial/angular-material.module';
 import { TestComponent } from './test/test.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PostFormComponent } from './post-form/post-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, TestComponent],
+  declarations: [
+    AppComponent,
+    TestComponent,
+    NavbarComponent,
+    PostFormComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,8 +33,11 @@ import { TestComponent } from './test/test.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    AngularMaterialModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
-  providers: [AngularMaterialModule],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

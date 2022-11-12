@@ -1,0 +1,63 @@
+<div class="d-flex justify-content-center">
+  <form
+    [formGroup]="formGroup"
+    #cardForm="ngForm"
+    (ngSubmit)="submitForm(cardForm.value)"
+  >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Enter Card Title</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="cardTitle"
+        placeholder="Cart title"
+      />
+      <mat-error *ngIf="formGroup.get('cardTitle')?.hasError('required')"
+        >This filed is required</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Enter Card Subtitle</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="cardSubtitle"
+        placeholder="Cart title"
+      />
+      <mat-error *ngIf="formGroup.get('cardSubtitle')?.hasError('required')"
+        >This filed is required</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Enter Card Image</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="img"
+        placeholder="Please provide a url"
+      />
+      <mat-error *ngIf="formGroup.get('img')?.hasError('required')"
+        >This filed is required</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Enter Card Content</mat-label>
+      <input
+        matInput
+        #message
+        maxlength="256"
+        placeholder="Ex. I need help with..."
+        formControlName="content"
+      />
+      <mat-error *ngIf="formGroup.get('content')?.hasError('required')"
+        >This filed is required</mat-error
+      >
+    </mat-form-field>
+    <button mat-flat-button color="primary" [disabled]="formGroup.invalid">
+      Submit
+    </button>
+  </form>
+</div>
