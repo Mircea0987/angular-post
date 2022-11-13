@@ -12,7 +12,7 @@ export class PostService {
   postData(card: any) {
     this.http
       .post(
-        'https://angular-post-77c1d-default-rtdb.europe-west1.firebasedatabase.app/cards.json',
+        'https://angular-post-77c1d-default-rtdb.europe-west1.firebasedatabase.app/results.json',
         card
       )
       .subscribe((res) => {
@@ -20,9 +20,7 @@ export class PostService {
       });
   }
   getData() {
-    return this.http.get(
-      'https://angular-post-77c1d-default-rtdb.europe-west1.firebasedatabase.app/cards.json'
-    );
+    return this.http.get('assets/database/data.json');
   }
   //firebase
 }

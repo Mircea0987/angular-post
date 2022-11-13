@@ -4,6 +4,7 @@ import { PostFormComponent } from './post-form/post-form.component';
 import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'createCard', pathMatch: 'full' },
   { path: 'createCard', component: PostFormComponent },
   { path: 'allCards', component: TestComponent },
 ];
