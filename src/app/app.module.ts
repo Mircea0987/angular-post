@@ -15,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostFormComponent } from './post-form/post-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TestForComponent } from './test/test-for/test-for.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TestComponent,
     NavbarComponent,
     PostFormComponent,
+    TestForComponent,
   ],
   imports: [
     BrowserModule,

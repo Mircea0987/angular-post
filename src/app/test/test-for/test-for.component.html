@@ -1,0 +1,6 @@
+<!-- <div>
+  <app-test [card]="getDataList"></app-test>
+</div> -->
+<div *ngFor="let card of getDataList">
+  <app-test [card]="card"></app-test>
+</div>

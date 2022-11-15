@@ -1,10 +1,19 @@
-{
-    "results": [
-        {
-        "cardSubtitle": "test",
-        "cardTitle": "test",
-        "content": "test",
-        "img": "test"            
-        }
-    ]
-}
+[
+    {
+        
+        "cardSubtitle": "Meet my dog Shany",
+        "cardTitle": "Best dog ever!",
+        "content": "My dog is the best dog ever .... ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFzHhaRcE91HDHt4mTDCywsF_yxWeD--_7OHFQSgj1&s"            
+        
+        
+    },
+    {
+         "cardSubtitle": "Meet my cat Missy",
+        "cardTitle": "Best cat ever!",
+        "content": "My cat is the best cat ever .... ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFmvASAHQ8CVmBfLL7QEGefPp2P8W_-ffsHG7MUOlnGw&s"   
+    }
+
+    
+]

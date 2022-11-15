@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -7,25 +6,17 @@ import { PostService } from '../post.service';
   styleUrls: ['./test.component.css'],
 })
 export class TestComponent implements OnInit {
-  constructor(private postService: PostService) {}
+  @Input() card: any;
 
-  cardSubtitle: any;
-  cardTitle: any;
-  content: any;
-  img: any;
+  currentVal: number = 0;
+  isPressed: boolean = false;
 
-  getDataList: any = [];
+  constructor() {}
 
-  ngOnInit(): void {
-    this.postService.getData().subscribe((data) => {
-      this.getDataList = data;
+  ngOnInit(): void {}
 
-      console.log(this.getDataList);
-
-      this.cardSubtitle = this.getDataList.results.map(
-        (cardSubtitle: any) => cardSubtitle.cardSubtitle
-      );
-      console.log(this.cardSubtitle);
-    });
+  incrementValue() {
+    this.isPressed = true;
+    this.currentVal++;
   }
 }
